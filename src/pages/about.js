@@ -1,10 +1,38 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import pic from "../assets/mypic.jpg";
 import fb from "../assets/fb.png";
 import tw from "../assets/tw.png";
 import li from "../assets/li.png";
 
-const about = () => {
+const About = () => {
+  const words = [
+    "SOFTWARE DEVELOPER",
+    "FRONTEND DEVELOPER",
+    "BACKEND DEVELOPER",
+  ];
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const [currentWord, setCurrentWord] = useState("");
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const type = () => {
+      const word = words[currentWordIndex];
+      setCurrentWord(word.slice(0, currentIndex + 1));
+      setCurrentIndex((prevIndex) => prevIndex + 1);
+
+      if (currentIndex === word.length) {
+        setCurrentIndex(0);
+        setCurrentWordIndex((prevIndex) => (prevIndex + 1) % words.length);
+      }
+    };
+
+    const timer = setTimeout(type, 200);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [currentWordIndex, currentIndex]);
+
   return (
     <div className="content lg:flex">
       <div className="container lg:block lg:justify-center lg:ml-96 lg:items-center">
@@ -13,7 +41,8 @@ const about = () => {
           Matt Lim
         </h1>
         <h2 className="text-center  pt-4 md:pt-8 tracking-widest">
-          COMPUTER ENGINEERING
+          {currentWord}
+          <span className="caret"></span>
         </h2>
         <div className="wrapper">
           <img
@@ -54,4 +83,4 @@ const about = () => {
   );
 };
 
-export default about;
+export default About;

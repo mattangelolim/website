@@ -14,6 +14,24 @@
 .App {
   background-color: white;
   height: 100vh;
+  animation: fade-in 0.8s ease-in;
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+.fade-in.show {
+  opacity: 1;
 }
 
 .content {
@@ -30,6 +48,10 @@
   width: 35%;
   height: 100%;
   background-color: rgb(209, 216, 205);
+}
+
+.span {
+  color: rgb(209, 216, 205);
 }
 
 .container {
@@ -102,6 +124,27 @@
   background-color: rgb(23, 57, 248);
 }
 
+.caret {
+  position: absolute;
+  margin-top: 3%;
+  margin-right: 2%;
+  transform: translateY(-50%);
+  width: 1em;
+  height: 1.2em;
+  border-right: 2px solid black;
+  animation: blink-caret 0.75s infinite;
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgb(23, 57, 248);
+  }
+}
+
 .container-2 {
   /* border: solid rgb(5, 5, 5); */
   margin-top: 12%;
@@ -122,6 +165,18 @@
     width: auto;
     height: auto;
     overflow-x: hidden;
+  }
+  .content::before {
+    background: white;
+  }
+  .name {
+    font-size: 25px;
+  }
+  .course {
+    font-size: large;
+  }
+  .nav-head {
+    margin-left: 5px;
   }
   .content {
     display: block;
@@ -155,6 +210,6 @@
   }
   .footer {
     font-size: 12px;
-    padding: 8px 16px;
+    padding: 8px 24px;
   }
 }

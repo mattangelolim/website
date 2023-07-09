@@ -1,4 +1,5 @@
 import React from "react";
+import ML from "../assets/ML.png";
 
 const navbar = () => {
   return (
@@ -6,9 +7,18 @@ const navbar = () => {
       <div className="max-w-7x1 mx-auto px-3 sm:px-6 lg:px-12">
         <div className="flex items-center justify-between h-24">
           <div className="flex items-center">
-            <div className="flex-shrink-0">
-              <a href="#" className="text-white h-16 text-3xl font-bold px-12">
-                Matt Lim
+            <div className="flex mt-8">
+              {/* <img
+                src={ML}
+                alt="logo"
+                className="h-8 ml-8 rounded-lg bg-blue-500 shadow-lg shadow-blue-500/50"
+              /> */}
+              <a
+                href="#"
+                className="name nav-head text-white h-16 text-3xl font-bold px-2"
+              >
+                Matt Lim |{" "}
+                <span className="course span text-2xl">Computer Engineer</span>
               </a>
             </div>
           </div>
