@@ -30,8 +30,8 @@ const about = () => {
           />
         </div>
       </div>
-      <div className="container-2 md:text-justify md:ml-10 sm:relative  sm:text-justify">
-        <h1 className="md:text-8xl font-semibold sm:text-6xl">Hello</h1>
+      <div className="container-2 md:text-justify md:ml-10">
+        <h1 className="md:text-8xl font-semibold">Hello</h1>
         <h2 className="md:text-4xl md:mt-5 md:mb-5">
           Here's who I am & what I do
         </h2>
