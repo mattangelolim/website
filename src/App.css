@@ -116,7 +116,13 @@
   border: 0.5px solid black;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 576px) {
+  .App {
+    background-color: white;
+    width: auto;
+    height: auto;
+    overflow-x: hidden;
+  }
   .content {
     display: block;
   }
@@ -145,6 +151,10 @@
     margin-top: 10px;
     font-size: 16px;
     text-align: justify;
-    width: 100%;
+    width: 70%;
+  }
+  .footer {
+    font-size: 12px;
+    padding: 8px 16px;
   }
 }
