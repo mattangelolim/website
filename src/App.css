@@ -43,7 +43,8 @@
 .content {
   position: relative;
   display: flex;
-  border: 0.1px solid transparent;
+  /* border: 0.1px solid transparent; */
+  /* border: 5px solid orange; */
 }
 
 .content::before {
@@ -53,16 +54,19 @@
   left: 0;
   width: 35%;
   height: 100%;
-  background-color: rgb(209, 216, 205);
+  background: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));
 }
 
 .span {
-  color: rgb(209, 216, 205);
+  color: rgb(176, 231, 144);
+}
+
+.list a:hover {
+  background: rgb(51, 147, 131);
 }
 
 .container {
   position: inherit;
-  background-color: rgb(209, 216, 205);
   margin-left: 20%;
   margin-top: 10%;
   margin-bottom: 10%;
@@ -188,6 +192,7 @@
     display: block;
   }
   .container {
+    background-color: rgb(51, 139, 147);
     display: block;
     margin-left: 10%;
     margin-right: 10%;
@@ -219,4 +224,34 @@
     font-size: 15px;
     padding: 10px 24px;
   }
+}
+
+/* CSS FOR RESUME PAGE */
+.title {
+  justify-content: center;
+}
+.page-resume {
+  display: block;
+  margin-bottom: -25px;
+  border: 0.5px solid transparent;
+  background: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));
+}
+.experience {
+  margin: 0 auto;
+  margin-top: 5%;
+  margin-bottom: 1%;
+  justify-content: center;
+  width: 900px;
+}
+.download:hover {
+  border: 1px solid blue;
+}
+
+.boxes {
+  margin: 0 auto;
+  justify-content: center;
+  width: 850px;
+  height: 500px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: white;
 }

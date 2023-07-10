@@ -2,11 +2,19 @@ import "./App.css";
 import React, { useState, useEffect } from "react";
 import Navbar from "./components/navbar";
 import About from "./pages/about";
+import Resume from "./pages/resume";
+import Contact from "./pages/Contact";
+import Projects from "./pages/projects";
 import Footer from "./components/footer";
 import RingLoader from "react-spinners/RingLoader";
 
 function App() {
   const [loading, setLoading] = useState(false);
+  const [activePage, setActivePage] = useState("about");
+
+  const handleNavbarClick = (page) => {
+    setActivePage(page);
+  };
 
   useEffect(() => {
     setLoading(true);
@@ -28,8 +36,11 @@ function App() {
         </div>
       ) : (
         <>
-          <Navbar />
-          <About />
+          <Navbar onNavbarClick={handleNavbarClick} />
+          {activePage === "about" && <About />}
+          {activePage === "resume" && <Resume />}
+          {activePage === "projects" && <Projects />}
+          {activePage === "Contact" && <Contact />}
           <Footer />
         </>
       )}
