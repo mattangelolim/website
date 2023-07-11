@@ -47,14 +47,17 @@ const About = () => {
         <div className="wrapper">
           <img
             src={fb}
+            alt="fb"
             className="fb h-8 px-0.5 py-0.5 bg-white rounded-full mr-4"
           />
           <img
             src={tw}
+            alt="tw"
             className="tw h-8 px-0.5 py-0.5 bg-white rounded-full mr-4"
           />
           <img
             src={li}
+            alt="li"
             className="li h-8 px-0.5 py-0.5 bg-white rounded-full"
           />
         </div>
